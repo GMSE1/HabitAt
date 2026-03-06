@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HabitAt 🌱
 
 A full-stack habit tracking application that helps users build and maintain consistent daily routines. Users can create an account, define personal habits, log daily completions, and track streaks over time.
@@ -116,3 +117,7 @@ HabitAt/
 ## Author
 
 Greg — Flatiron School Software Engineering Capstone
+=======
+# HabitAt
+A full-stack habit tracking application designed for anyone looking to build consistency in their daily routine — students, professionals, or anyone working toward self-improvement goals.
+>>>>>>> 573af0c13d42a277028f087dbd78d9ce71c4f4d5
