@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-# HabitAt 🌱
+# HabitAt 🌿
 
-A full-stack habit tracking application that helps users build and maintain consistent daily routines. Users can create an account, define personal habits, log daily completions, and track streaks over time.
+A full-stack habit tracking application designed for anyone looking to build consistency in their daily routine — students, professionals, or anyone working toward self-improvement goals. Users can create an account, define personal habits, log daily completions, and track streaks over time.
 
 ---
 
@@ -12,6 +11,7 @@ A full-stack habit tracking application that helps users build and maintain cons
 - Log daily habit completions
 - Ownership protection — users can only access their own habits
 - React frontend with protected routes and conditional rendering
+- Nature-inspired UI with smooth animations and toast notifications
 
 ---
 
@@ -37,8 +37,8 @@ A full-stack habit tracking application that helps users build and maintain cons
 ---
 
 ### Backend Setup
+
 ```bash
-# From the root of the project
 cd server
 pipenv install
 pipenv shell
@@ -52,8 +52,8 @@ The Flask server will run on `http://localhost:5555`
 ---
 
 ### Frontend Setup
+
 ```bash
-# From the root of the project
 cd client
 npm install
 npm start
@@ -89,6 +89,7 @@ The React app will run on `http://localhost:3000`
 ---
 
 ## Project Structure
+
 ```
 HabitAt/
 ├── server/
@@ -103,6 +104,7 @@ HabitAt/
 ├── client/
 │   └── src/
 │       ├── App.js
+│       ├── App.css
 │       └── components/
 │           ├── Login.js
 │           ├── Register.js
@@ -117,7 +119,3 @@ HabitAt/
 ## Author
 
 Greg — Flatiron School Software Engineering Capstone
-=======
-# HabitAt
-A full-stack habit tracking application designed for anyone looking to build consistency in their daily routine — students, professionals, or anyone working toward self-improvement goals.
->>>>>>> 573af0c13d42a277028f087dbd78d9ce71c4f4d5
