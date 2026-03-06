@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --forest: #1a3a2a;
+  --forest-mid: #2d5a3d;
+  --sage: #7fb069;
+  --sage-light: #a8c99a;
+  --cream: #f5f0e8;
+  --cream-dark: #ede6d6;
+  --bark: #8b6914;
+  --text-dark: #1c2b1e;
+  --text-mid: #4a6352;
+  --text-light: #7a9682;
+  --white: #ffffff;
+  --shadow-soft: 0 4px 24px rgba(26, 58, 42, 0.10);
+  --shadow-card: 0 2px 12px rgba(26, 58, 42, 0.08);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 10% 20%, rgba(127, 176, 105, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(26, 58, 42, 0.08) 0%, transparent 50%);
+}
+
+/* â”€â”€â”€ AUTH PAGES â”€â”€â”€ */
+
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(127, 176, 105, 0.2);
+  animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-logo .logo-icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.auth-logo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--forest);
+  letter-spacing: -0.5px;
+}
+
+.auth-logo p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.auth-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--forest);
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--cream-dark);
+  border-radius: var(--radius-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: var(--cream);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(127, 176, 105, 0.15);
+  background: var(--white);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 13px;
+  background: var(--forest);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.1s;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary:hover {
+  background: var(--forest-mid);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+
+.auth-footer a {
+  color: var(--sage);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  color: var(--forest);
+}
+
+.error-msg {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+/* â”€â”€â”€ DASHBOARD â”€â”€â”€ */
+
+.dashboard-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  animation: fadeUp 0.4s ease both;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.dashboard-header-left h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--forest);
+  letter-spacing: -0.5px;
+}
+
+.dashboard-header-left p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.btn-logout {
+  padding: 9px 20px;
+  background: transparent;
+  color: var(--text-mid);
+  border: 1.5px solid var(--cream-dark);
+  border-radius: var(--radius-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  border-color: var(--forest);
+  color: var(--forest);
+  background: var(--cream);
+}
+
+/* â”€â”€â”€ HABIT FORM â”€â”€â”€ */
+
+.habit-form-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(127, 176, 105, 0.15);
+}
+
+.habit-form-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--forest);
+  margin-bottom: 18px;
+}
+
+.habit-form-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.habit-form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.btn-add {
+  padding: 12px 24px;
+  background: var(--sage);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-add:hover {
+  background: var(--forest-mid);
+  transform: translateY(-1px);
+}
+
+/* â”€â”€â”€ HABIT CARDS â”€â”€â”€ */
+
+.habits-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--text-mid);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.habits-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.habit-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(127, 176, 105, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.2s, transform 0.2s;
+  animation: fadeUp 0.4s ease both;
+}
+
+.habit-card:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-2px);
+}
+
+.habit-card-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.habit-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--sage-light), var(--sage));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.habit-info h4 {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--text-dark);
+  margin-bottom: 3px;
+}
+
+.habit-info p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+.habit-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-log {
+  padding: 8px 16px;
+  background: var(--forest);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-log:hover {
+  background: var(--forest-mid);
+}
+
+.btn-delete {
+  padding: 8px 12px;
+  background: transparent;
+  color: #dc2626;
+  border: 1.5px solid #fecaca;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text-light);
+}
+
+.empty-state .empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  font-size: 0.95rem;
+}
+
+/* â”€â”€â”€ TOAST NOTIFICATION â”€â”€â”€ */
+
+.toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: var(--forest);
+  color: var(--white);
+  padding: 14px 22px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(26, 58, 42, 0.25);
+  animation: toastIn 0.3s ease both;
+  z-index: 999;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
